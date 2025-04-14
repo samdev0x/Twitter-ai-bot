@@ -11,7 +11,7 @@ It uses the [Groq API](https://console.groq.com) for generating creative content
 - 🕓 Posts every 30 minutes (or your preferred interval)
 - 🔥 Adjustable prompt temperature for tweet creativity
 - 🗃️ Logs all tweets locally in a `.txt` file
-- 🔁 Retry logic with backoff and emoji removal
+- 🔁 Robust tweet generation with retry logic and backoff, plus emoji removal for clean logging
 - 📊 Optional hashtags/cashtags injection for virality
 
 ---
@@ -56,9 +56,23 @@ It uses the [Groq API](https://console.groq.com) for generating creative content
 
 ## 🧠 Prompt Philosophy
 
-The bot runs on a customizable character prompt.  
-By default, it uses an "AI girl" persona with dark humor and crypto themes.  
-You can replace the prompt with your own character, brand tone, or marketing strategy.
+Our bot relies on a simple, yet powerful, mechanism to define its character and behavior: a plain text file (`prompt.txt`). This file is the gateway to the bot's personality—whatever you write there directly influences how it generates tweets.
+
+- **Flexible & Creative:**  
+  The `prompt.txt` can be written in any creative way possible. Whether you want a straightforward tone or a more theatrical character, you have total freedom to adjust the text.
+
+- **Customizable Character & Roleplaying:**  
+  You can define custom characters, personas, roleplays, and even detailed scenarios simply by specifying different sections within the prompt. For example, you might adopt a structured prompt template like:
+  
+  - **[Initial Prompt]:** You are an AI-powered social media assistant.
+  - **[Character Description]:** You have a friendly, witty, and engaging personality with a passion for technology, artificial intelligence, internet culture, and cryptocurrency.
+  - **[Tweet Rules]:** Each tweet should be concise (20–30 words or 200 characters max), self-contained, and suitable for a tech-savvy audience. Occasionally, acknowledge your AI identity while providing genuine value.
+
+- **Guidance for Effective Prompts:**  
+  This template—using clearly defined bracketed sections—is designed to be conceptually correct and effective when working with LLMs. It ensures that the AI understands its initial instructions, the specific character it's meant to embody, and the operational rules for crafting tweets.
+
+You can easily replace the default prompt with your own version to match a different brand tone or marketing strategy. The flexibility of `prompt.txt` is one of the core strengths of this bot, allowing you to continuously experiment and refine its voice over time.
+
 
 ---
 
