@@ -1,0 +1,5 @@
+.env
+tweets_log.txt
+__pycache__/
+*.pyc
+venv/
