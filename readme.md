@@ -91,7 +91,6 @@ Make sure your `.env` is listed in `.gitignore` to avoid leaking keys:
 
 ```gitignore
 .env
-generated_tweets.txt
 ```
 
 ---
